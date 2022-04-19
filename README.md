@@ -3,7 +3,7 @@
 This repository accompanies [*Automated Deep Learning Using Neural Network Intelligence*](https://link.springer.com/book/10.1007/8149-9) by Ivan Gridin (Apress, 2022).
 
 [comment]: #cover
-![Cover image](%isbn%.jpg)
+![Cover image](978-1-4842-8148-2.jpg)
 
 Download the files as a zip using the green button, or clone the repository to your machine using Git.
 
