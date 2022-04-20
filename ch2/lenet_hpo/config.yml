@@ -1,0 +1,14 @@
+trialConcurrency: 4
+searchSpaceFile: search_space.json
+trialCodeDirectory: .
+
+# TensorFlow Model:
+trialCommand: python3 tf_trial.py
+# PyTorch Model:
+#trialCommand: python3 pt_trial.py
+
+tuner:
+  name: GridSearch
+trainingService:
+  platform: local
+

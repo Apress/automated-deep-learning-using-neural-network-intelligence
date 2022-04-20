@@ -1,0 +1,12 @@
+{
+  "activation": "relu",
+  "dropout": {
+    "_name": 1,
+    "rate": 0.5
+  },
+  "filter_size": 32,
+  "kernel_size": 5,
+  "l1_size": 256,
+  "batch_size": 512,
+  "learning_rate": 0.001
+}

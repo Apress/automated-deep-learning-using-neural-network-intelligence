@@ -1,0 +1,6 @@
+{
+  "x": {
+    "_type": "choice", "_value": [-1, 0, 1] },
+  "y": {
+    "_type": "choice", "_value": [-1, 0, 1] }
+}

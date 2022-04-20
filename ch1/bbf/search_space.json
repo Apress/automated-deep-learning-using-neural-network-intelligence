@@ -1,0 +1,5 @@
+{
+  "x": {"_type": "quniform", "_value": [1, 100, 1]},
+  "y": {"_type": "quniform", "_value": [1, 10, 1]},
+  "z": {"_type": "quniform", "_value": [1, 10000, 0.01]}
+}

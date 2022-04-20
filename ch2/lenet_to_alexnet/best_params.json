@@ -1,0 +1,23 @@
+{
+  "fe_slot_1": {
+    "_name": "with_pool",
+    "filters": 32,
+    "kernel": 7,
+    "pool_size": 5
+  },
+  "fe_slot_2": {
+    "_name": "with_pool",
+    "filters": 8,
+    "kernel": 11,
+    "pool_size": 5
+  },
+  "fe_slot_3": {
+    "_name": "simple",
+    "filters": 8,
+    "kernel": 7
+  },
+  "l1_size": 1024,
+  "l2_size": 512,
+  "dropout_rate": 0.3,
+  "learning_rate": 0.0001
+}

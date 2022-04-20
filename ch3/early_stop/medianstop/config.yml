@@ -1,0 +1,22 @@
+searchSpace:
+  x:
+    _type: quniform
+    _value: [1, 100, 0.1]
+
+maxTrialNumber: 100
+trialConcurrency: 8
+trialCodeDirectory: .
+trialCommand: python3 trial.py
+
+tuner:
+  name: Random
+
+assessor:
+  name: Medianstop
+  classArgs:
+    # number of warm up steps
+    start_step: 10
+
+trainingService:
+  platform: local
+

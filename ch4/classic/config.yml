@@ -1,0 +1,11 @@
+experimentName: example_mnist
+trialConcurrency: 1
+maxTrialNum: 100
+trainingServicePlatform: local
+searchSpacePath: search_space.json
+tuner:
+  builtinTunerName: PPOTuner
+  classArgs:
+    optimize_mode: maximize
+trial:
+  command: python3 trial.py

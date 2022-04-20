@@ -1,0 +1,26 @@
+{
+  "conv1": {
+    "_value": "2",
+    "_idx": 2
+  },
+  "conv2": {
+    "_value": "0",
+    "_idx": 0
+  },
+  "fc2": {
+    "_value": "0",
+    "_idx": 0
+  },
+  "pool": {
+    "_value": "0",
+    "_idx": 0
+  },
+  "skip_connect": {
+    "_value": [
+      ""
+    ],
+    "_idx": [
+      0
+    ]
+  }
+}

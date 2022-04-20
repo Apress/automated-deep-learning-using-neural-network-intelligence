@@ -1,0 +1,19 @@
+searchSpace:
+  x:
+    _type: "quniform"
+    _value: [-10, 10, 0.01]
+  y:
+    _type: "quniform"
+    _value: [-10, 10, 0.01]
+
+trialConcurrency: 4
+trialCodeDirectory: .
+trialCommand: python3 trial.py
+
+tuner:
+  codeDirectory: .
+  className: evolution_tuner.NewEvolutionTuner
+
+trainingService:
+  platform: local
+

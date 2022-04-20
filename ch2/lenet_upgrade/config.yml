@@ -1,0 +1,14 @@
+trialConcurrency: 2
+maxTrialNumber: 300
+searchSpaceFile: search_space.json
+trialCodeDirectory: .
+
+# TensorFlow Model:
+trialCommand: python3 tf_trial.py
+# PyTorch Model:
+#trialCommand: python3 pt_trial.py
+
+tuner:
+  name: Random
+trainingService:
+  platform: local

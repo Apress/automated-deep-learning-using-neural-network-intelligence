@@ -1,0 +1,16 @@
+{
+  "fe_repeat": 2,
+  "fe_kernel_size_0": 3,
+  "fe_activation": "1",
+  "fe_switch_0": 0,
+  "fe_kernel_size_1": 5,
+  "fe_kernel_size_2": 3,
+  "fc_repeat": 2,
+  "l1_size": 128,
+  "fc_dropout_rate": 0.3,
+  "fc_switch_0": 0,
+  "l2_size": 64,
+  "fc_switch_1": 0,
+  "l3_size": 64,
+  "fc_switch_2": 0
+}

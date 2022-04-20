@@ -1,0 +1,10 @@
+{
+  "pool_size": 3,
+  "res_cells_repeat": 5,
+  "bottle_neck_0_skip_connection": 1,
+  "bottle_neck_1_skip_connection": 0,
+  "bottle_neck_2_skip_connection": 0,
+  "bottle_neck_3_skip_connection": 0,
+  "bottle_neck_4_skip_connection": 0,
+  "fc1_output_dim": 512
+}

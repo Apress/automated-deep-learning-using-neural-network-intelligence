@@ -1,0 +1,42 @@
+{
+  "conv1": {
+    "_type": "layer_choice",
+    "_value": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  "conv2": {
+    "_type": "layer_choice",
+    "_value": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  "fc2": {
+    "_type": "layer_choice",
+    "_value": [
+      "0",
+      "1"
+    ]
+  },
+  "pool": {
+    "_type": "layer_choice",
+    "_value": [
+      "0",
+      "1"
+    ]
+  },
+  "skip_connect": {
+    "_type": "input_choice",
+    "_value": {
+      "candidates": [
+        "",
+        ""
+      ],
+      "n_chosen": 1
+    }
+  }
+}

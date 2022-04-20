@@ -1,0 +1,1 @@
+nnictl ss_gen --trial_command="python3 trial.py" --trial_dir=ch4/classic --file=ch4/classic/search_space.json

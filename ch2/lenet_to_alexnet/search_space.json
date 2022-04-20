@@ -1,0 +1,63 @@
+{
+  "fe_slot_1": {
+    "_type": "choice",
+    "_value": [
+      {"_name": "none"},
+      {
+        "_name": "simple",
+        "filters": {"_type": "choice", "_value": [8, 16, 32]},
+        "kernel": {"_type": "choice", "_value": [5, 7, 9, 11]}
+      },
+      {
+        "_name": "with_pool",
+        "filters": {"_type": "choice", "_value": [8, 16, 32]},
+        "kernel": {"_type": "choice", "_value": [5, 7, 9, 11]},
+        "pool_size": {"_type": "choice", "_value": [3, 5, 7]}
+      }
+    ]
+  },
+  "fe_slot_2": {
+    "_type": "choice",
+    "_value": [
+      {"_name": "none"},
+      {
+        "_name": "simple",
+        "filters": {"_type": "choice", "_value": [8, 16, 32]},
+        "kernel": {"_type": "choice", "_value": [5, 7, 9, 11]}
+      },
+      {
+        "_name": "with_pool",
+        "filters": {"_type": "choice", "_value": [8, 16, 32]},
+        "kernel": {"_type": "choice", "_value": [5, 7, 9, 11]},
+        "pool_size": {"_type": "choice", "_value": [3, 5, 7]}
+      }
+    ]
+  },
+  "fe_slot_3": {
+    "_type": "choice",
+    "_value": [
+      {"_name": "none"},
+      {
+        "_name": "simple",
+        "filters": {"_type": "choice", "_value": [8, 16, 32]},
+        "kernel": {"_type": "choice", "_value": [5, 7, 9, 11]}
+      },
+      {
+        "_name": "with_pool",
+        "filters": {"_type": "choice", "_value": [8, 16, 32]},
+        "kernel": {"_type": "choice", "_value": [5, 7, 9, 11]},
+        "pool_size": {"_type": "choice", "_value": [3, 5, 7]}
+      }
+    ]
+  },
+
+  "l1_size": {
+    "_type": "choice", "_value": [512, 1024, 2048] },
+  "l2_size": {
+    "_type": "choice", "_value": [0, 512, 1024] },
+  "dropout_rate": {
+    "_type": "choice", "_value": [0.3, 0.5, 0.7] },
+
+  "learning_rate": {
+    "_type": "choice", "_value": [0.001, 0.0001] }
+}

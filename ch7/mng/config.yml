@@ -1,0 +1,15 @@
+trialConcurrency: 4
+maxTrialNumber: 10
+searchSpace:
+    x:
+      _type: quniform
+      _value: [1, 100, 0.1]
+
+trialCodeDirectory: .
+trialCommand: python3 trial.py
+tuner:
+  name: Random
+
+
+trainingService:
+  platform: local

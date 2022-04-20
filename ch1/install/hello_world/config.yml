@@ -1,0 +1,10 @@
+trialConcurrency: 1
+maxTrialNumber: 3
+searchSpaceFile: search_space.json
+trialCommand: python3 trial.py
+trialCodeDirectory: .
+tuner:
+  name: Random
+trainingService:
+  platform: local
+

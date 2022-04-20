@@ -1,0 +1,29 @@
+trialConcurrency: 4
+maxTrialNumber: 1000
+searchSpace:
+    x:
+      _type: quniform
+      _value: [1, 100, 0.1]
+
+trialCodeDirectory: .
+trialCommand: python3 trial.py
+tuner:
+  name: Random
+
+# Remote Training Service Settings
+nniManagerIp: <nni_host_ip> # example: 10.10.120.20
+
+trainingService:
+  platform: remote
+  machineList:
+
+    - host: <remote1_ip> # example: 10.10.120.21
+      user: <remote1_ssh_user> # example: nni_user
+      password: <remote1_ssh_pass> # example: nni_user_pass
+      pythonPath: <remote1_ssh_pass> # example: /opt/python3/bin
+
+    - host: <remote2_ip> # example: 10.10.120.22
+      user: <remote2_ssh_user> # example: nni_user
+      password: <remote2_ssh_pass> # example: nni_user_pass
+      pythonPath: <remote2_ssh_pass> # example: /opt/python3/bin
+
