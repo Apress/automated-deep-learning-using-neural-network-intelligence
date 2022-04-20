@@ -1,4 +1,4 @@
-FROM msranni/nni:v2.5
+FROM msranni/nni:v2.6
 RUN mkdir /book
 ADD . /book
 EXPOSE 8080

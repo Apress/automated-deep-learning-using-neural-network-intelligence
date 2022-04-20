@@ -84,7 +84,7 @@ class PtLeNetModel(nn.Module):
             output = self(x)
             predict = output.argmax(dim = 1, keepdim = True)
             accuracy = round(accuracy_score(predict, y), 4)
-            print(F'Epoch: {epoch}| Accuracy: {accuracy}')
+            print(F'Accuracy: {accuracy}')
 
     def test_model(self, test_dataset = None):
         self.eval()
@@ -108,6 +108,12 @@ class PtLeNetModel(nn.Module):
         counter = 0
         for params in list(self.parameters()):
             counter += torch.count_nonzero(params).item()
+        return counter
+
+    def count_total_weights(self):
+        counter = 0
+        for params in list(self.parameters()):
+            counter += torch.numel(params)
         return counter
 
     @classmethod

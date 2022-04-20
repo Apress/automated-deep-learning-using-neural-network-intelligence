@@ -1,8 +1,4 @@
-from numpy import exp
-from numpy import sqrt
-from numpy import cos
-from numpy import e
-from numpy import pi
+from numpy import exp, sqrt, cos, pi, e
 from ch3.bbf.utils import noise
 
 

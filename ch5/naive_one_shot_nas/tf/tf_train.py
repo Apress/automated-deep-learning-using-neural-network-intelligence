@@ -17,12 +17,12 @@ def train(model):
         y_train,
         batch_size = batch_size,
         epochs = 10,
-        verbose = 0
+        verbose = 1
     )
 
 
 def test(model):
     """Testing Trained Model Performance"""
     (_, _), (x_test, y_test) = mnist_dataset()
-    loss, accuracy = model.evaluate(x_test, y_test, verbose = 0)
+    loss, accuracy = model.evaluate(x_test, y_test, verbose = 1)
     return accuracy

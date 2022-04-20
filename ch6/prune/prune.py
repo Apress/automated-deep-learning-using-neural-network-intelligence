@@ -2,9 +2,9 @@ import os
 import random
 import matplotlib.pyplot as plt
 import torch
+from nni.algorithms.compression.v2.pytorch.pruning import LevelPruner
+from ch6.datasets import mnist_dataset
 from ch6.model.pt_lenet import PtLeNetModel
-from nni.algorithms.compression.pytorch.pruning import LevelPruner
-from ch8.utils import mnist_dataset
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -39,37 +39,35 @@ prune_config = [{
 # LevelPruner
 pruner = LevelPruner(model, prune_config)
 # Compressing the model
-model_pruned = pruner.compress()
+model_pruned, _ = pruner.compress()
 
-# Retraining compressed model
+# Retraining (fine-tuning) compressed model
 epochs = 10
 acc_list = []
-size_list = []
 for epoch in range(1, epochs + 1):
-    pruner.update_epoch(epoch)
     model_pruned.train_model(epochs = 1, train_dataset = train_ds)
-    nzw = model_pruned.count_nonzero_weights()
     acc = model_pruned.test_model(test_dataset = test_ds)
     acc_list.append(acc)
-    size_list.append(nzw)
-    print(f'Pruned: Epoch {epoch}. Non zero weight: {nzw}. Accuracy: {acc}.')
+    print(f'Pruned: Epoch {epoch}. Accuracy: {acc}')
 
 # Displaying Results
-fig, axs = plt.subplots(2)
-
-axs[0].set_title('Accuracy')
-axs[0].axhline(y = original_acc, c = "red")
-axs[0].plot(acc_list)
-axs[0].set_xticks([])
-
-axs[1].set_title('Size')
-axs[1].axhline(y = original_nzw, c = "red")
-axs[1].plot(size_list)
-axs[1].set_xticks([])
-
+pruned_nzw = model_pruned.count_nonzero_weights()
+plt.title(
+    'Fine-tuning\n'
+    f'Original Non-zero weights number: {original_nzw}\n'
+    f'Pruned Non-zero weights number: {pruned_nzw}')
+plt.axhline(y = original_acc, c = "red",
+            label = 'Original model accuracy')
+plt.plot(acc_list, label = 'Pruned model accuracy')
+plt.xlabel('Retraining Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
 plt.show()
 
 # Saving Pruned Model
 model_path = f'{CUR_DIR}/../data/lenet_pruned.pth'
 mask_path = f'{CUR_DIR}/../data/mask.pth'
-pruner.export_model(model_path = model_path, mask_path = mask_path)
+pruner.export_model(
+    model_path = model_path,
+    mask_path = mask_path
+)

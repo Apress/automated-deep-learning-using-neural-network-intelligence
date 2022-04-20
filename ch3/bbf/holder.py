@@ -1,8 +1,4 @@
-from numpy import exp
-from numpy import sqrt
-from numpy import cos
-from numpy import sin
-from numpy import pi
+from numpy import exp, sqrt, cos, sin, pi
 
 
 def holder_function(x, y):

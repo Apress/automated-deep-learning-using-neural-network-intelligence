@@ -1,6 +1,12 @@
+import os
+import sys
 import nni
 
-from black_box_function import black_box_function
+# For NNI use relative import for user-defined modules
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) + '/../..'
+sys.path.append(SCRIPT_DIR)
+
+from ch1.bbf.black_box_function import black_box_function
 
 if __name__ == '__main__':
     # parameter from the search space selected by tuner

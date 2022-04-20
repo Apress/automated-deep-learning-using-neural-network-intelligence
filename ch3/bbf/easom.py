@@ -1,6 +1,4 @@
-from numpy import exp
-from numpy import cos
-from numpy import pi
+from numpy import exp, cos, pi
 
 from ch3.bbf.utils import scatter_plot
 

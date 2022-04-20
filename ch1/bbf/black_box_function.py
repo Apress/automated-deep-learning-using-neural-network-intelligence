@@ -7,6 +7,7 @@ def black_box_function(x, y, z):
     y in [1, 10] integer
     z in [1, 10000] real
     """
+    xxx
     if y % 2 == 0:
         if x > 50:
             r = (pow(x, sin(z)) - x) * x / 2
