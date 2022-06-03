@@ -31,7 +31,7 @@ pruner = AGPPruner(
     total_iteration = 20,
     finetuner = lambda m: m.train_model(epochs = 1),
     evaluator = evaluator,
-    speed_up = True,
+    speedup = True,
     dummy_input = torch.rand(10, 1, 28, 28),
     log_dir = CUR_DIR  # logging results (model.pth and mask.pth is there)
 )
